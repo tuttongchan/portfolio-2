@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Reveal Animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <!-- loader  -->
+    <div class="wrapper">
+      <div class="loader"></div>
+    </div>
+
+    <div class="container">
+      <!-- nav  -->
+      <header>
+        <nav class="menu">
+          <div class="menu-left menu-item">
+            <a href="#" class="middle menu-link">contact</a>
+          </div>
+          <div class="menu-center menu-item">
+            <a href="#" class="middle menu-link">applications</a>
+          </div>
+          <div class="menu-right menu-item">
+            <a href="#" class="middle menu-link"
+              >resume<i class="fas fa-download"></i
+            ></a>
+          </div>
+        </nav>
+
+        <!-- hero image  -->
+        <!-- <div class="wrapper-img">
+          <div class="box"></div>
+          <div>
+            <img class="image" src="/img/hero-fields.jpg" />
+          </div>
+        </div> -->
+
+        <!-- heading  -->
+        <div class="heading">
+          <h1 class="heading-1">Tut</h1>
+          <h1 class="heading-2">Tongchantra</h1>
+          <div class="socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <!-- hero-container  -->
+      <div class="hero-container">
+        <div class="sidebar-text">2021</div>
+        <div class="img-nav">
+          <div class="prev">prev</div>
+          <div class="next">next <i class="fas fa-arrow-down"></i></div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="projects-section">
+        <div class="main-container">
+          <h2 class="heading-projects">Applications</h2>
+
+          <div class="post-wrapper">
+            <div>
+              <div class="post">
+                <img
+                  class="thumbnail"
+                  src="img/Screen Shot 2021-01-06 at 7.40.15 PM.png"
+                />
+                <div class="post-preview">
+                  <h6 class="post-title">Don Fitness</h6>
+                  <p class="post-intro">
+                    Don Fitness is a gym landing page promoting various
+                    membership options
+                  </p>
+                  <a
+                    class="demo-link"
+                    href="https://jovial-thompson-013b27.netlify.app"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    class="source-link"
+                    href="https://jovial-thompson-013b27.netlify.app"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="post">
+                <img
+                  class="thumbnail"
+                  src="img/Screen Shot 2021-01-07 at 8.57.39 PM.png"
+                />
+                <div class="post-preview">
+                  <h6 class="post-title">Pokedex</h6>
+                  <p class="post-intro">
+                    Application using the PokeAPI to display Pokemon by index
+                  </p>
+                  <a
+                    class="demo-link"
+                    href="https://bankist-dom.netlify.app/"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    class="source-link"
+                    href="https://jovial-thompson-013b27.netlify.app"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="post">
+                <img
+                  class="thumbnail"
+                  src="img/Screen Shot 2021-01-07 at 10.19.35 PM.png"
+                />
+                <div class="post-preview">
+                  <h6 class="post-title">Movie App</h6>
+                  <p class="post-intro">
+                    Application using Movie Database API to search for your
+                    favorite movies by title
+                  </p>
+                  <a
+                    class="demo-link"
+                    href="https://goofy-mahavira-25db27.netlify.app"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a
+                    class="source-link"
+                    href="https://jovial-thompson-013b27.netlify.app"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javacript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      var textWrapper = document.querySelector('.heading-1');
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      anime.timeline().add({
+        targets: '.heading-1 .letter',
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 2000,
+        delay: (el, i) => 4800 + 50 * i,
+      });
+
+      var textWrapper = document.querySelector('.heading-2');
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      anime.timeline().add({
+        targets: '.heading-2 .letter',
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        duration: 2000,
+        delay: (el, i) => 4800 + 50 * i,
+      });
+
+      TweenMax.to('.wrapper', 2, {
+        top: '-100%',
+        ease: Expo.easeInOut,
+        delay: 3.6,
+      });
+
+      var tl = new TimelineMax();
+
+      tl.from('.loader', 1.6, {
+        scaleY: '0%',
+        y: 80,
+        ease: Expo.easeInOut,
+        delay: 1,
+        transformOrigin: '50% 100%',
+      });
+
+      tl.to('.loader', 1., {
+        height: '20vh',
+        scaleY: '0%',
+        ease: Expo.easeInOut,
+        transformOrigin: '0% -100%',
+      });
+
+      TweenMax.to('.box', 2.4, {
+        y: '-100%',
+        ease: Expo.easeInOut,
+        delay: 3.8,
+      });
+
+      var tl = new TweenMax.staggerFrom(
+        '.menu > div',
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 4.2,
+        },
+        0.1
+      );
+
+      var tl = new TweenMax.staggerFrom(
+        '.socials',
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 4.2,
+        },
+        0.1
+      );
+
+      var tl = new TweenMax.staggerFrom(
+        '.hero-container > div',
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 4.2,
+        },
+        0,
+        1
+      );
+    </script>
+  </body>
+</html>
