@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Goldman', cursive;
+html {
+  scroll-behavior: smooth;
   /* overflow: hidden; */
+}
+
+body {
+  font-family: 'Goldman', cursive;
+  overflow-y: scroll;
 }
 
 :root {
@@ -212,6 +214,11 @@ img {
   left: 80px;
 }
 
+.next-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* loader  */
 
 .wrapper {
@@ -405,5 +412,15 @@ footer {
   .fa-github {
     font-size: 2.3rem;
     margin-top: 0.5rem;
+  }
+
+  .foot-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foot-item {
+    margin-bottom: 0.5rem;
   }
 }
