@@ -29,14 +29,13 @@
       <header>
         <nav class="menu">
           <div class="menu-left menu-item">
-            <a href="#" class="middle menu-link">contact</a>
+            <a href="#footer" class="middle menu-link">contact</a>
           </div>
           <div class="menu-center menu-item">
-            <a href="#" class="middle menu-link">applications</a>
+            <a href="#projects" class="middle menu-link">applications</a>
           </div>
           <div class="menu-right menu-item">
-            <a href="#" class="middle menu-link"
-              >resume<i class="fas fa-download"></i
+            <a href="Tuts Resume 2020 copy.pdf" class="middle menu-link" target="_blank">resume<i class="fas fa-download"></i
             ></a>
           </div>
         </nav>
@@ -54,8 +53,8 @@
           <h1 class="heading-1">Tut</h1>
           <h1 class="heading-2">Tongchantra</h1>
           <div class="socials">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/tuttongchan" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tut-tongchantra-36b50a1b6/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </header>
@@ -64,13 +63,13 @@
       <div class="hero-container">
         <div class="sidebar-text">2021</div>
         <div class="img-nav">
-          <div class="prev">prev</div>
-          <div class="next">next <i class="fas fa-arrow-down"></i></div>
+          <!-- <div class="prev">prev</div> -->
+          <div class="next"><a href="#projects" class="next-link">next<i class="fas fa-arrow-down"></i></a></div>
         </div>
       </div>
 
       <!-- Projects Section -->
-      <div class="projects-section">
+      <div class="projects-section" id="projects">
         <div class="main-container">
           <h2 class="heading-projects">Applications</h2>
 
@@ -89,13 +88,13 @@
                   </p>
                   <a
                     class="demo-link"
-                    href="https://jovial-thompson-013b27.netlify.app"
+                    href="https://keen-heisenberg-d6cac1.netlify.app"
                     target="_blank"
                     >Demo</a
                   >
                   <a
                     class="source-link"
-                    href="https://jovial-thompson-013b27.netlify.app"
+                    href="https://github.com/tuttongchan/don-fitness"
                     target="_blank"
                     >Github</a
                   >
@@ -116,13 +115,13 @@
                   </p>
                   <a
                     class="demo-link"
-                    href="https://bankist-dom.netlify.app/"
+                    href="https://quizzical-hoover-bf27a2.netlify.app"
                     target="_blank"
                     >Demo</a
                   >
                   <a
                     class="source-link"
-                    href="https://jovial-thompson-013b27.netlify.app"
+                    href="https://github.com/tuttongchan/pokedex"
                     target="_blank"
                     >Github</a
                   >
@@ -144,13 +143,13 @@
                   </p>
                   <a
                     class="demo-link"
-                    href="https://goofy-mahavira-25db27.netlify.app"
+                    href="https://quirky-babbage-36a20b.netlify.app"
                     target="_blank"
                     >Demo</a
                   >
                   <a
                     class="source-link"
-                    href="https://jovial-thompson-013b27.netlify.app"
+                    href="https://github.com/tuttongchan/movie-app"
                     target="_blank"
                     >Github</a
                   >
@@ -158,11 +157,31 @@
               </div>
             </div>
           </div>
+          <!-- <div class="projects-nav">
+            <div class="prev">prev</div>
+            <div class="next">next <i class="fas fa-arrow-down"></i></div>
+          </div> -->
         </div>
       </div>
+      <footer id="footer">
+        <div class="footer-container">
+          <ul class="foot-list">
+            <li class="foot-item">
+              <i class="fas fa-map-marker-alt foot-logos"></i>Los Angeles County
+            </li>
+            <li class="foot-item">
+              <i class="fas fa-phone-alt foot-logos"></i>626-873-0910
+            </li>
+            <li class="foot-item">
+              <i class="fas fa-envelope foot-logos"></i>tuttongchan@yahoo.com
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Javacript -->
+    <script src="app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
       var textWrapper = document.querySelector('.heading-1');
@@ -178,7 +197,7 @@
         opacity: [0, 1],
         easing: 'easeOutExpo',
         duration: 2000,
-        delay: (el, i) => 4800 + 50 * i,
+        delay: (el, i) => 4000 + 50 * i,
       });
 
       var textWrapper = document.querySelector('.heading-2');
@@ -194,18 +213,18 @@
         opacity: [0, 1],
         easing: 'easeOutExpo',
         duration: 2000,
-        delay: (el, i) => 4800 + 50 * i,
+        delay: (el, i) => 4000 + 50 * i,
       });
 
-      TweenMax.to('.wrapper', 2, {
+      TweenMax.to('.wrapper', 1, {
         top: '-100%',
         ease: Expo.easeInOut,
-        delay: 3.6,
+        delay: 3,
       });
 
       var tl = new TimelineMax();
 
-      tl.from('.loader', 1.6, {
+      tl.from('.loader', 0.8, {
         scaleY: '0%',
         y: 80,
         ease: Expo.easeInOut,
@@ -213,17 +232,11 @@
         transformOrigin: '50% 100%',
       });
 
-      tl.to('.loader', 1., {
+      tl.to('.loader', 0.8, {
         height: '20vh',
         scaleY: '0%',
         ease: Expo.easeInOut,
         transformOrigin: '0% -100%',
-      });
-
-      TweenMax.to('.box', 2.4, {
-        y: '-100%',
-        ease: Expo.easeInOut,
-        delay: 3.8,
       });
 
       var tl = new TweenMax.staggerFrom(
@@ -233,7 +246,7 @@
           opacity: 0,
           y: 30,
           ease: Expo.easeInOut,
-          delay: 4.2,
+          delay: 3.6,
         },
         0.1
       );
@@ -245,7 +258,7 @@
           opacity: 0,
           y: 30,
           ease: Expo.easeInOut,
-          delay: 4.2,
+          delay: 3.6,
         },
         0.1
       );
@@ -257,7 +270,7 @@
           opacity: 0,
           y: 30,
           ease: Expo.easeInOut,
-          delay: 4.2,
+          delay: 3.6,
         },
         0,
         1
