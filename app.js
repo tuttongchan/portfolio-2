@@ -1,1 +1,1 @@
-alert('Site is currently undergoing maintenance, but most of the functionality works. So feel free to browse! Enjoy :)');
+alert('Site is currently undergoing maintenance and isnt mobile responsive yet, but some functionality still works. So feel free to browse! Enjoy :)');
