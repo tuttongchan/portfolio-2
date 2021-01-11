@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tuts Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   </head>
   <body>
@@ -29,32 +33,34 @@
       <header>
         <nav class="menu">
           <div class="menu-left menu-item">
-            <a href="#footer" class="middle menu-link">contact</a>
+            <a href="#projects" class="middle menu-link">contact</a>
           </div>
           <div class="menu-center menu-item">
             <a href="#projects" class="middle menu-link">applications</a>
           </div>
           <div class="menu-right menu-item">
-            <a href="Tuts Resume 2020 copy.pdf" class="middle menu-link" target="_blank">resume<i class="fas fa-download"></i
+            <a
+              href="Tuts Resume 2020 copy.pdf"
+              class="middle menu-link"
+              target="_blank"
+              >resume<i class="fas fa-download"></i
             ></a>
           </div>
         </nav>
-
-        <!-- hero image  -->
-        <!-- <div class="wrapper-img">
-          <div class="box"></div>
-          <div>
-            <img class="image" src="/img/hero-fields.jpg" />
-          </div>
-        </div> -->
 
         <!-- heading  -->
         <div class="heading">
           <h1 class="heading-1">Tut</h1>
           <h1 class="heading-2">Tongchantra</h1>
           <div class="socials">
-            <a href="https://github.com/tuttongchan" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/tut-tongchantra-36b50a1b6/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/tuttongchan" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/tut-tongchantra-36b50a1b6/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
           </div>
         </div>
       </header>
@@ -64,16 +70,20 @@
         <div class="sidebar-text">2021</div>
         <div class="img-nav">
           <!-- <div class="prev">prev</div> -->
-          <div class="next"><a href="#projects" class="next-link">next<i class="fas fa-arrow-down"></i></a></div>
+          <div class="next">
+            <a href="#projects" class="next-link"
+              >next<i class="fas fa-arrow-down"></i
+            ></a>
+          </div>
         </div>
       </div>
 
       <!-- Projects Section -->
       <div class="projects-section" id="projects">
         <div class="main-container">
-          <h2 class="heading-projects">Applications</h2>
+          <h2 class="heading-projects" data-aos="zoom-in">Applications</h2>
 
-          <div class="post-wrapper">
+          <div class="post-wrapper" data-aos="fade-down">
             <div>
               <div class="post">
                 <img
@@ -157,14 +167,8 @@
               </div>
             </div>
           </div>
-          <!-- <div class="projects-nav">
-            <div class="prev">prev</div>
-            <div class="next">next <i class="fas fa-arrow-down"></i></div>
-          </div> -->
         </div>
-      </div>
-      <footer id="footer">
-        <div class="footer-container">
+        <div class="footer-container" data-aos="fade-up">
           <ul class="foot-list">
             <li class="foot-item">
               <i class="fas fa-map-marker-alt foot-logos"></i>Los Angeles County
@@ -177,104 +181,128 @@
             </li>
           </ul>
         </div>
-      </footer>
+      </div>
+      <!-- <footer id="footer">
+        <div class="footer-container" data-aos="fade-up">
+          <ul class="foot-list">
+            <li class="foot-item">
+              <i class="fas fa-map-marker-alt foot-logos"></i>Los Angeles County
+            </li>
+            <li class="foot-item">
+              <i class="fas fa-phone-alt foot-logos"></i>626-873-0910
+            </li>
+            <li class="foot-item">
+              <i class="fas fa-envelope foot-logos"></i>tuttongchan@yahoo.com
+            </li>
+          </ul>
+        </div>
+      </footer> -->
     </div>
-
-    <!-- Javacript -->
-    <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script>
-      var textWrapper = document.querySelector('.heading-1');
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /\S/g,
-        "<span class='letter'>$&</span>"
-      );
-
-      anime.timeline().add({
-        targets: '.heading-1 .letter',
-        translateY: [200, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 2000,
-        delay: (el, i) => 4000 + 50 * i,
-      });
-
-      var textWrapper = document.querySelector('.heading-2');
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /\S/g,
-        "<span class='letter'>$&</span>"
-      );
-
-      anime.timeline().add({
-        targets: '.heading-2 .letter',
-        translateY: [200, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: 'easeOutExpo',
-        duration: 2000,
-        delay: (el, i) => 4000 + 50 * i,
-      });
-
-      TweenMax.to('.wrapper', 1, {
-        top: '-100%',
-        ease: Expo.easeInOut,
-        delay: 3,
-      });
-
-      var tl = new TimelineMax();
-
-      tl.from('.loader', 0.8, {
-        scaleY: '0%',
-        y: 80,
-        ease: Expo.easeInOut,
-        delay: 1,
-        transformOrigin: '50% 100%',
-      });
-
-      tl.to('.loader', 0.8, {
-        height: '20vh',
-        scaleY: '0%',
-        ease: Expo.easeInOut,
-        transformOrigin: '0% -100%',
-      });
-
-      var tl = new TweenMax.staggerFrom(
-        '.menu > div',
-        2,
-        {
-          opacity: 0,
-          y: 30,
-          ease: Expo.easeInOut,
-          delay: 3.6,
-        },
-        0.1
-      );
-
-      var tl = new TweenMax.staggerFrom(
-        '.socials',
-        2,
-        {
-          opacity: 0,
-          y: 30,
-          ease: Expo.easeInOut,
-          delay: 3.6,
-        },
-        0.1
-      );
-
-      var tl = new TweenMax.staggerFrom(
-        '.hero-container > div',
-        2,
-        {
-          opacity: 0,
-          y: 30,
-          ease: Expo.easeInOut,
-          delay: 3.6,
-        },
-        0,
-        1
-      );
-    </script>
   </body>
+
+  <!-- Javacript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    var textWrapper = document.querySelector('.heading-1');
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime.timeline().add({
+      targets: '.heading-1 .letter',
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 2000,
+      delay: (el, i) => 4000 + 50 * i,
+    });
+
+    var textWrapper = document.querySelector('.heading-2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime.timeline().add({
+      targets: '.heading-2 .letter',
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'easeOutExpo',
+      duration: 2000,
+      delay: (el, i) => 4000 + 50 * i,
+    });
+
+    TweenMax.to('.wrapper', 1, {
+      top: '-100%',
+      ease: Expo.easeInOut,
+      delay: 3,
+    });
+
+    var tl = new TimelineMax();
+
+    tl.from('.loader', 0.8, {
+      scaleY: '0%',
+      y: 80,
+      ease: Expo.easeInOut,
+      delay: 1,
+      transformOrigin: '50% 100%',
+    });
+
+    tl.to('.loader', 0.8, {
+      height: '20vh',
+      scaleY: '0%',
+      ease: Expo.easeInOut,
+      transformOrigin: '0% -100%',
+    });
+
+    var tl = new TweenMax.staggerFrom(
+      '.menu > div',
+      2,
+      {
+        opacity: 0,
+        y: 30,
+        ease: Expo.easeInOut,
+        delay: 3.6,
+      },
+      0.1
+    );
+
+    var tl = new TweenMax.staggerFrom(
+      '.socials',
+      2,
+      {
+        opacity: 0,
+        y: 30,
+        ease: Expo.easeInOut,
+        delay: 3.6,
+      },
+      0.1
+    );
+
+    var tl = new TweenMax.staggerFrom(
+      '.hero-container > div',
+      2,
+      {
+        opacity: 0,
+        y: 30,
+        ease: Expo.easeInOut,
+        delay: 3.6,
+      },
+      0,
+      1
+    );
+
+    AOS.init({
+      delay: 250, // values from 0 to 3000, with step 50ms
+      duration: 2500, // values from 0 to 3000, with step 50ms
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
 </html>

@@ -10,12 +10,18 @@ html {
 }
 
 body {
+  /* font-family: "Avenir Next", "Avenir", sans-serif; */
   font-family: 'Goldman', cursive;
   overflow-y: scroll;
 }
 
 :root {
   --margin-left: 4px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
 }
 
 /*------ Header ------*/
@@ -194,12 +200,10 @@ img {
 
 .img-nav {
   position: absolute;
-  /* right: 13%; */
   right: 13%;
   bottom: 13%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
-  /* color: grey; */
   color: #fff;
 }
 
@@ -243,14 +247,13 @@ img {
 /*------ Projects Section ------*/
 
 .projects-section {
-  /* width: 100%; */
-  /* height: 100vh; */
-  padding: 2.5rem 0 10rem 0;
+  padding: 2.5rem 0 12rem 0;
   background-color: #f8f9fa;
 }
 
 .main-container {
   position: relative;
+  padding-bottom: 9rem;
   width: 100%;
 }
 
@@ -302,16 +305,7 @@ img {
   margin-bottom: 8px;
 }
 
-/* projects-nav */
-/* .projects-nav {
-  position: absolute;
-  right: 13%;
-  bottom: -40%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  color: #000;
-} */
-
+/*----- projects-nav -----*/
 .demo-link,
 .source-link {
   padding: 1.5px 5px;
@@ -336,18 +330,10 @@ img {
 }
 
 /*------ Footer ------*/
-footer {
-  padding: 6rem 0 6rem 0;
-  background-color: #f8f9fa;
-  /* background-color: yellow; */
-}
-
 .footer-container {
   width: 100%;
   margin: 0 auto;
-  /* padding: 7rem 0; */
-  /* border-top: 1px solid black; */
-  /* background-color: turquoise; */
+  background: #ee0979;
 }
 
 .foot-list {
@@ -372,20 +358,36 @@ footer {
   margin-right: 7px;
 }
 
-.foot-copyright {
+/* .foot-copyright {
   width: 100%;
   font-size: 3rem;
   text-align: center;
   margin-top: 7rem;
-}
+} */
 
-.copyright-text {
+/* .copyright-text {
   font-size: 1.3rem;
-}
+} */
 
-/* media queries  */
+/*----- Media Queries -----*/
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+
+  .heading-1 .letter,
+  .heading-2 .letter {
+    display: inline;
+    line-height: 1em;
+    font-size: 2.3rem;
+  }
+}
 
 @media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+
   .wrapper-img {
     width: 90%;
   }
@@ -423,4 +425,13 @@ footer {
   .foot-item {
     margin-bottom: 0.5rem;
   }
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1800px) {
+}
+
+@media (min-width: 1801px) {
 }
